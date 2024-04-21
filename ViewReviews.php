@@ -25,14 +25,14 @@ require_once("LoginToDatabase.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $input = $_POST['input'];
 
-    $sql = "SELECT b.name, r.review FROM businesses b
+    $sql = "SELECT b.name, r.rating, r.review FROM businesses b
     JOIN reviews r ON b.id = r.business_id WHERE b.name LIKE '%$input%' 
     ";
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo " Name: " . $row["name"]. " review: " . $row["review"]. "<br>";
+            echo " Name: " . $row["name"]. " Rating: " . $row["rating"]. " Review: " . $row["review"]. "<br>";
         }
     } else {
         echo "Business not yet in system";
