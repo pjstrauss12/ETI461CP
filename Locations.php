@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search a business</title>
+    <title>Search a city</title>
 </head>
 <body>
-    <h2>Enter Business Name</h2>
+    <h2>Enter City</h2>
     <form method="post">
     <input type="text" name="input"><br>
     <input type="submit" value="Submit">

@@ -4,6 +4,7 @@
     <title>Submit a Review</title>
 </head>
 <body>
+<h2>Submit a review</h2>
 <form method="post">
     <label>Business Name:</label><br>
     <input type="text" name="business"><br>
